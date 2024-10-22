@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    /* gradient sirve para atenuar la imagen */
+    background: linear-gradient(rgba(255, 255, 255, 0.311),rgba(255, 255, 255, 0.311)),
+    url(IMAGENES/cuanto-tiempo-se-tarda-en-pintar-un-carro-p-min.jpg);
+    /* cover permite rellenar la imagen en la ventana */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* fixed fija la imagen */
+    background-attachment: fixed;
+    
+}
+header {
+    background-color: #0084ff7a;
+    /* altura de la franja azul */
+    padding: 15px;
+    /* coloca en una sola linea logo y menu */
+    display: flex;
+
+}
+header h1 {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(10, 54, 97);
+    font-size: 3rem;
+}
+header h1 span{
+    font-size: 1rem;
+    color: rgb(7, 78, 160);
+}
+
+nav ul {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+nav ul li {
+    /* coloca en linea el menu */
+    display: inline-block;
+    margin: 0 5px;
+    /* coloca en linea el submenu */
+    position:relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    /* coloca espacio al menu */
+    padding: 10px 15px;
+    /* submenu */
+    display: block;
+}
+
+nav ul li ul {
+    /* permite que el submenu desaparezca */
+    display: none;
+    /* permite que se mantenga alienado el menu y submenu */
+    position: absolute;
+    /* le da color al submenu */
+    background-color: #0084ff7a;
+    /* indica el ancho del submenu */
+    width: 150px;
+}
+
+nav ul li:hover ul {
+    /* permite despliegue del menu */
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+/* DISEÑANDO EL CUERPO */
+main {
+    /* espacio del contenido de texto y box*/
+    padding: 10px;
+    
+}
+
+
+
+footer {
+    background-color: #0084ff7a;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+footer p{
+    color: rgb(10, 54, 97);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: medium;
+    
+}
+
+
+
+
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: 10000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+.borrar-repuesto {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+    top:100%;
+    z-index: 1;
+    background-color: rgb(201, 228, 248);
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+/* .contenido-hero {
+    margin-top: 20px;
+    color: rgb(35, 75, 140);
+} */
+/* .contenido-hero form {
+    position: absolute;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    width: 300px;
+    margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+    position:absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(IMAGENES/lupa.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    border:none;
+} */
+
+#encabezado {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 3rem;
+    color: #0b344b;
+}
+#lista-repuestos .row {
+    
+    margin-bottom:20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+
+.card {
+
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(141, 201, 241, 0.607);
+}
+
+.info-card  {
+    padding: 10px 20px;
+}
+
+.info-card p, 
+.card h4 {
+    margin-bottom: 3px;
+}
+.info-card .precio {
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.button,
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+      display: inline-block;
+      height: 38px;
+      padding: 0 30px;
+      color: #555;
+      text-align: center;
+      align-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      background-color: transparent;
+      border-radius: 4px;
+      border: 1px solid #bbb;
+      cursor: pointer;
+    }
+    
+    .button:hover,
+    button:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    input[type="button"]:hover {
+      color: #221c46;
+      border-color: #888;
+    }
+    
+    .button.button-primary,
+    button.button-primary,
+    input[type="submit"].button-primary {
+      color: #FFF;
+      text-decoration: none;
+      background-color: #296b92;
+      
+    }
+    
+    .button.button-primary:hover {
+      background-color: #1EAEDB;
+      border-color: #1EAEDB;
+    }
+    
+    
+    .u-full-width {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .u-pull-right {
+      float: right;
+    }
+    .u-pull-left {
+      float: left;
+    }
+    
+    
+   
+    
+   
+   

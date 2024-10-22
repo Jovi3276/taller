@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    /* gradient sirve para atenuar la imagen */
+    background: linear-gradient(rgba(255, 255, 255, 0.311),rgba(255, 255, 255, 0.311)),
+    url(IMAGENES/cuanto-tiempo-se-tarda-en-pintar-un-carro-p-min.jpg);
+    /* cover permite rellenar la imagen en la ventana */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* fixed fija la imagen */
+    background-attachment: fixed;
+    
+}
+header {
+    background-color: #0084ff7a;
+    /* altura de la franja azul */
+    padding: 15px;
+    /* coloca en una sola linea logo y menu */
+    display: flex;
+
+}
+header h1 {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(10, 54, 97);
+    font-size: 3rem;
+}
+header h1 span{
+    font-size: 1rem;
+    color: rgb(7, 78, 160);
+}
+
+nav ul {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+nav ul li {
+    /* coloca en linea el menu */
+    display: inline-block;
+    margin: 0 5px;
+    /* coloca en linea el submenu */
+    position:relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    /* coloca espacio al menu */
+    padding: 10px 15px;
+    /* submenu */
+    display: block;
+}
+
+nav ul li ul {
+    /* permite que el submenu desaparezca */
+    display: none;
+    /* permite que se mantenga alienado el menu y submenu */
+    position: absolute;
+    /* le da color al submenu */
+    background-color: #0084ff7a;
+    /* indica el ancho del submenu */
+    width: 150px;
+}
+
+nav ul li:hover ul {
+    /* permite despliegue del menu */
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+/* DISEÑANDO EL CUERPO */
+section {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.contact-form {
+    /* background-color: rgba(57, 114, 200, 0.632); */
+    /* padding: 20px;
+    border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(15, 28, 215, 0.612); */
+    width: 500px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:#0fb4f5;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #0fb4f5;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 95%;
+    background-color:rgba(36, 61, 106, 0.436);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    
+    
+}
+
+.contact-form button {
+    width: 50%;
+    padding: 10px;
+    background-color: #0b1e39a0;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #213288;
+    
+}
+footer {
+    background-color: #0084ff7a;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    /* bottom: 0; */
+}
+footer p{
+    color: rgb(10, 54, 97);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: medium;
+    
+}

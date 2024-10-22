@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    /* gradient sirve para atenuar la imagen */
+    background: linear-gradient(rgba(255, 255, 255, 0.311),rgba(255, 255, 255, 0.311)),
+    url(IMAGENES/cuanto-tiempo-se-tarda-en-pintar-un-carro-p-min.jpg);
+    /* cover permite rellenar la imagen en la ventana */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* fixed fija la imagen */
+    background-attachment: fixed;
+
+}
+header {
+    background-color: #0084ff7a;
+    /* altura de la franja azul */
+    padding: 15px;
+    /* coloca en una sola linea logo y menu */
+    display: flex;
+
+}
+header h1 {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(10, 54, 97);
+    font-size: 3rem;
+}
+header h1 span{
+    font-size: 1rem;
+    color: rgb(7, 78, 160);
+}
+
+nav ul {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+nav ul li {
+    /* coloca en linea el menu */
+    display: inline-block;
+    margin: 0 5px;
+    /* coloca en linea el submenu */
+    position:relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    /* coloca espacio al menu */
+    padding: 10px 15px;
+    /* submenu */
+    display: block;
+}
+
+nav ul li ul {
+    /* permite que el submenu desaparezca */
+    display: none;
+    /* permite que se mantenga alienado el menu y submenu */
+    position: absolute;
+    /* le da color al submenu */
+    background-color: #0084ff7a;
+    /* indica el ancho del submenu */
+    width: 150px;
+}
+
+nav ul li:hover ul {
+    /* permite despliegue del menu */
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+/* DISEÑANDO EL CUERPO */
+main {
+    /* espacio del contenido de texto y box*/
+    padding: 25px;
+    text-align: center;
+}
+
+h2{
+
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(56, 57, 82);
+
+}
+
+/* DISEñANDO LA GALERIA */
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 20px;
+    
+    
+}
+/* .galeria{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(8, 8, 78);
+    transition: 0.5s;
+}
+.galeria:hover{
+    transform: scale(1.2);
+   }
+img{
+    border-radius: 2rem;
+    border-color: blue;
+} */
+
+/* Estilo para el contenedor principal */
+.principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 05px 0;
+}
+
+/* Estilo para cada tarjeta de servicio */
+.servicios {
+    background-color: #68b6f284;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(16, 211, 32, 0.1);
+    margin: 20px;
+    max-width: 300px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en las tarjetas */
+.servicios:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.servicios .imagenes img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el título de los servicios */
+.servicios h3 {
+    font-size: 1.5em;
+    color: #212c9c;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la información dentro de las tarjetas */
+.servicios .datos {
+    font-size: 1em;
+    color: #0c1858;
+}
+
+/* Estilo para los párrafos dentro de la sección de datos */
+.servicios .datos p {
+    margin: 10px 0;
+}
+
+/* Estilo para el botón */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo específico para el botón verde */
+.boton-verde {
+    background-color: #196299;
+    color: white;
+}
+
+
+footer {
+    background-color: #0084ff7a;
+
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+footer p{
+    color: rgb(10, 54, 97);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: medium;
+
+}

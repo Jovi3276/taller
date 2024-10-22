@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="galeria.css">
+    <!-- <style>
+        body{
+            background-color: beige;
+            margin: 0;
+            padding: 0;
+        }
+        .autos{
+            border-style: outset;
+            width: 100%;
+            height: 32rem;
+            padding: 1px;
+            margin: 0px;
+            background-color: cadetblue;
+            /* background-attachment: fixed; */
+        }
+        .boton-verde{
+            width: 5rem;
+            background-color: greenyellow;
+            border-style: ridge;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 10%;
+        }
+        .principal{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            row-gap: 5rem;
+            column-gap: 5rem;
+            padding: 2rem;
+            margin: 1rem;
+        }
+        .autitos{
+            display: grid;
+            margin: auto;
+            place-items: center;
+        }
+        p{
+            font-family: monospace;
+            font-size: smaller;
+        }
+        img{
+            width: 23rem;
+            height: 15rem;
+            border: ridge;
+        }
+        h1{
+            font-size: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            text-align: center;
+        }
+        h2,h3{
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            text-align: center;
+        }
+        .datos{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+        }
+    
+    </style> -->
+    
+</head>
+<body>
+    <header>
+        <h1>TECNOSUR <span>Taller de Chapa y Pintura</span></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a>
+                    <ul>
+                        <li><a href="chapa-pintura.html">Chapa y Pintura</a></li>
+                        <li><a href="desabollado.html">Desabollado</a></li>
+                        <li><a href="pulido.html">Pulido</a></li>
+                    </ul>
+                </li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="preg.html">Preguntas Frecuentes</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="repuestos.html">Repuestos</a></li>
+                
+            </ul>
+            
+        </nav>
+    </header>
+    <main>
+        
+            <!-- <h2>GALERIA</h2><br>
+        
+        <section class="container">
+            <div class="galeria">
+                <img src="IMAGENES/img2.jpg" alt="">
+                <div class="contenido">
+                    <p>Pintura de Capot</p>
+                </div>
+            </div>
+            <div class="galeria">
+                <img src="IMAGENES/img3.jpg" alt="">
+                <div class="contenido">
+                    <p>Pintura de guardafango</p>
+                </div>
+            </div>
+            <div class="galeria">
+                <img src="IMAGENES/img5.jpg" alt="">
+                <div class="contenido">
+                    <p>Pintura de guardafango</p>
+                </div>
+            </div>
+            <div class="galeria">
+                <img src="IMAGENES/img8.jpg" alt="">
+                <div class="contenido">
+                    <p>Pintura general de un vehiculo</p>
+                </div>
+            </div>
+            <div class="galeria">
+                <img src="IMAGENES/img10.jpg" alt="">
+                <div class="contenido">
+                    <p>Secado de pintura</p>
+                </div>
+            </div>
+            <div class="galeria">
+                <img src="IMAGENES/desabollado.jpg" alt="">
+                <div class="contenido">
+                    <p>Desabollado de guardafango</p>
+                </div>
+            </div>
+            <div class="galeria">
+                <img src="IMAGENES/desabollar.jpg" alt="">
+                <div class="contenido">
+                    <p>Desabollado de guardafango</p>
+                </div>
+            </div>
+            <div class="galeria">
+                <img src="IMAGENES/PUL.jpg" alt="">
+                <div class="contenido">
+                    <p>Pulido general del vehiculo</p>
+                </div>
+            </div>
+            <div class="galeria">
+                <img src="IMAGENES/PUL1.jpg" alt="">
+                <div class="contenido">
+                    <p>Pulido de capot</p>
+                </div>
+            </div>
+            -->
+
+        <!-- </section> -->
+        <!-- <h1>JSON OBJECT CREATION IN JAVASCRIPT</h1> -->
+    <!-- <h2>CARROS</h2> -->
+    <main class="principal">
+        
+    </main>
+    <!-- <section class="eventos"> -->
+    <script>
+        const getGaleria= async ()=>{
+            const responde = await fetch("galeria.json")
+            const data = await responde.json();
+            let out='<div class="principal">'
+            data.forEach((productos) => {
+
+                const tabla1 = document.querySelector('.autitos .datos')
+                out+= `
+                    <div class= "servicios"><div class="imagenes"><h3>${productos.servicios}</h3>
+                    <img src="${productos.imagen}">
+                    <div class= "datos"><p>Tiempo:${productos.tiempo}</p>
+                    <p>Costo:${productos.costo}</p>
+                    <p><a href="${productos.enlace}" class="boton boton-verde">Ver productos</a></p>
+                    </div></div></div>
+                     `
+            })
+                        document.querySelector('.principal').innerHTML=out}
+            getGaleria()
+    </script>
+    <!-- </section> -->
+    
+
+    </main>
+    <footer>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+

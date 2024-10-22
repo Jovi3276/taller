@@ -1,0 +1,45 @@
+[
+{
+    "servicios":"Pintura de capot",
+    "tiempo": "5 horas" ,
+    "costo": 1000 ,
+    "imagen":"IMAGENES/img2.jpg",
+    "enlace":"/galeria1/pinturac.html"
+
+},
+
+{
+    "servicios":"Pintura de guardafango",
+    "tiempo": "2 horas",
+    "costo": 700,
+    "imagen":"IMAGENES/img3.jpg",
+    "enlace":"/galeria1/pintura.html"
+
+},
+{
+    "servicios":"Pintura general",
+    "tiempo": "5 dias",
+    "costo":10000,
+    "imagen":"IMAGENES/img5.jpg",
+    "enlace":"/galeria1/pinturag.html"
+
+},
+
+{
+    "servicios":"Desabollado",
+    "tiempo": "2 dias",
+    "costo": 8000,
+    "imagen":"IMAGENES/desabollar.jpg",
+    "enlace":"/galeria1/desabollado.html"
+
+},
+{
+    "servicios":"Pulido",
+    "tiempo": "8 hrs",
+    "costo":800,
+    "imagen":"IMAGENES/pulir.jpg",
+    "enlace":"/galeria1/pulido.html"
+
+}
+
+]

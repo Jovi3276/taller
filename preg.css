@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    /* gradient sirve para atenuar la imagen */
+    background: linear-gradient(rgba(255, 255, 255, 0.311),rgba(255, 255, 255, 0.311)),
+    url(IMAGENES/desabollar.jpg);
+    /* cover permite rellenar la imagen en la ventana */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* fixed fija la imagen */
+    background-attachment: fixed;
+    
+}
+header {
+    background-color: #0084ff7a;
+    /* altura de la franja azul */
+    padding: 15px;
+    /* coloca en una sola linea logo y menu */
+    display: flex;
+
+}
+header h1 {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(10, 54, 97);
+    font-size: 3rem;
+}
+header h1 span{
+    font-size: 1rem;
+    color: rgb(7, 78, 160);
+}
+
+nav ul {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+nav ul li {
+    /* coloca en linea el menu */
+    display: inline-block;
+    margin: 0 5px;
+    /* coloca en linea el submenu */
+    position:relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    /* coloca espacio al menu */
+    padding: 10px 15px;
+    /* submenu */
+    display: block;
+}
+
+nav ul li ul {
+    /* permite que el submenu desaparezca */
+    display: none;
+    /* permite que se mantenga alienado el menu y submenu */
+    position: absolute;
+    /* le da color al submenu */
+    background-color: #0084ff7a;
+    /* indica el ancho del submenu */
+    width: 150px;
+}
+
+nav ul li:hover ul {
+    /* permite despliegue del menu */
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+/* DISEÑANDO EL CUERPO */
+main {
+    /* espacio del contenido de texto y box*/
+    padding: 50px;
+    
+}
+
+h2{
+
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(10, 54, 97);
+    text-align: center;
+
+}
+#faq {
+    background-color: #03000053;
+    padding: 20px;
+    border-radius: 1rem;
+  }
+  
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.faq-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.faq-item h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.faq-item p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #060e39;
+}
+  
+.faq-item:hover {
+    background-color: #f2f2f2;
+    border-color: #ccc;
+}
+  
+footer {
+    background-color: #0084ff7a;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+footer p{
+    color: rgb(10, 54, 97);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: medium;
+    
+}
+@media (max-width: 768px) {
+    .faq-container {
+      flex-direction: column;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+  }
+
+
